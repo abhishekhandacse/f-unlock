@@ -23,7 +23,7 @@ if __name__ == "__main__":
 
     client = boto3.client('rekognition')
     source_imgs_path = 'source_imgs'
-    target_img_path = '/Users/salwan221/Desktop/1.jpg'
+    target_img_path = '/Users/salwan221/Desktop/sample.jpg'
 
     # preprocess_img(target_img_path)
 
