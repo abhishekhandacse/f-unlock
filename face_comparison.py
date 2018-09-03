@@ -1,29 +1,58 @@
-#Copyright 2018 Amazon.com, Inc. or its affiliates. All Rights Reserved.
-#PDX-License-Identifier: MIT-0 (For details, see https://github.com/awsdocs/amazon-rekognition-developer-guide/blob/master/LICENSE-SAMPLECODE.)
 
 import boto3
+import os
+import cv2
+from gtts import gTTS
+
+def speak(audio_string):
+    print audio_string
+    tts = gTTS(text=audio_string, lang='en', slow=False)
+    tts.save("output.mp3")
+    os.system("mpg321 output.mp3")
+
+
+def preprocess_img(img_path):
+
+    img = cv2.imread(img_path)
+    img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    img = cv2.resize(img, (128, 128))
+    cv2.imwrite(img_path, img)
+
 
 if __name__ == "__main__":
 
-    sourceFile='1.png'
-    targetFile='209.png'
-    client=boto3.client('rekognition')
-   
-    imageSource=open(sourceFile,'rb')
-    imageTarget=open(targetFile,'rb')
+    client = boto3.client('rekognition')
+    source_imgs_path = 'source_imgs'
+    target_img_path = '/Users/salwan221/Desktop/1.jpg'
 
-    response=client.compare_faces(SimilarityThreshold=70,
-                                  SourceImage={'Bytes': imageSource.read()},
-                                  TargetImage={'Bytes': imageTarget.read()})
-    
-    for faceMatch in response['FaceMatches']:
-        position = faceMatch['Face']['BoundingBox']
-        confidence = str(faceMatch['Face']['Confidence'])
-        print('The face at ' +
-               str(position['Left']) + ' ' +
-               str(position['Top']) +
-               ' matches with ' + confidence + '% confidence')
-    	print confidence
+    # preprocess_img(target_img_path)
 
-    imageSource.close()
-    imageTarget.close()               
+    result = None
+
+    for file_name in sorted(os.listdir(source_imgs_path)):
+
+        if file_name.endswith('jpg') or file_name.endswith('png'):
+
+            # preprocess_img(os.path.join(source_imgs_path, file_name))
+
+            source_img = open(os.path.join(source_imgs_path, file_name), 'rb')
+            target_img = open(target_img_path, 'rb')
+
+            # print file_name
+
+            response = client.compare_faces(SimilarityThreshold=70,
+                                            SourceImage={'Bytes': source_img.read()},
+                                            TargetImage={'Bytes': target_img.read()})
+
+            if response['FaceMatches'] is not None and len(response['FaceMatches']) > 0:
+                result = file_name[:len(file_name)-4]
+                break
+
+            source_img.close()
+            target_img.close()
+
+    if result is not None:
+        speak("Welcome, " + result + "!")
+    else:
+        speak("Access Denied!")
+
