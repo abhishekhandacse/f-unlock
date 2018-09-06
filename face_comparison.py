@@ -4,6 +4,7 @@ import os
 import cv2
 from gtts import gTTS
 
+
 def speak(audio_string):
     print audio_string
     tts = gTTS(text=audio_string, lang='en', slow=False)
@@ -23,7 +24,7 @@ if __name__ == "__main__":
 
     client = boto3.client('rekognition')
     source_imgs_path = 'source_imgs'
-    target_img_path = '/Users/salwan221/Desktop/sample.jpg'
+    target_img_path = './target.jpg'
 
     # preprocess_img(target_img_path)
 
