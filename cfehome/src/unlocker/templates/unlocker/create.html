@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block content %}
+<br>
+{% if error %}
+	<div class="row">
+		<div class="s10 offset-s1 center">
+			<h4 class="red-text darken-3" onclick="M.toast({html: 'Try Again!',classes: 'rounded'})">{{error}}</h4>
+		</div>
+	</div>
+{% endif %}
+
+<div class="row">
+	<div class="col s12">
+		<div class="card white darken-1">
+			<div class="card-content black-text">
+				<span class="card-title center">Create new product!</span>
+				<form method="POST" action="{% url "create" %}" enctype="multipart/form-data">
+					{% csrf_token %}
+					<div class="row">
+						<div class="input-field col s6">
+							<input id="Title" type="text" name="title" required="" aria-required="true">
+							<label for="title">Title</label>
+						</div>
+						<div class="input-field col s6">
+							<input id="url" type="text" name="url" required="" aria-required="true">
+							<label for="url">URL</label>
+						</div>
+						<div class="input-field col s12">
+							<textarea id="body" name="body" class="materialize-textarea" required="" aria-required="true"></textarea>
+							<label for="body">Description</label>
+						</div>
+					</div>
+					<div class="file-field s12">
+						<div class="input-field">
+							<div class="btn">
+								<span>Icon</span>
+								<input type="file" required="" aria-required="true" name="icon">
+							</div>
+							<div class="file-path-wrapper">
+								<input class="file-path validate" type="text">
+							</div>
+						</div>
+					</div>
+					<div class="file-field s12">
+						<div class="input-field">
+							<div class="btn">
+								<span>Image</span>
+								<input type="file" required="" aria-required="true" name="image">
+							</div>
+							<div class="file-path-wrapper">
+								<input class="file-path validate" type="text">
+							</div>
+						</div>
+					</div>
+					<div class="card-action center">
+						<button class="btn-large waves-effect waves-light cyan darken-3" type="submit" name="action">Add product</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock content %}

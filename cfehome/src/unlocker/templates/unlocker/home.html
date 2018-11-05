@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% for product in products.all %}
+	<div class="row valign-wrapper card white darken-1 z-depth-1">
+		<div class="col s2 center" onclick="window.location='{% url "detail" product.id %}';" style="cursor: pointer;">
+			<img src="{{ product.icon.url }}" class="responsive-img"/>
+		</div>
+		<div class="col s7 onclick="window.location='{% url "detail" product.id %}';" style="cursor: pointer;"">
+			<h4>{{ product.title }}</h4>
+			<p>{{ product.summary }}</p>
+		</div>
+		<div class="col s3 center">
+			<a href="javascript:{document.getElementById('upvote{{product.id}}').submit()}" class="responsive-img waves-effect waves-light btn tooltipped" data-position="bottom" data-tooltip="Current Votes: {{ product.votes_total }}"><i class="material-icons left">thumb_up</i>upvote!</a>
+		</div>
+	</div>	
+	<form id="upvote{{ product.id }}" method="POST" action="{% url "upvote" product.id %}">
+		{% csrf_token %}
+		<input type="hidden">
+	</form>
+{% endfor %}
+
+<script type="text/javascript">
+	$(document).ready(function(){
+	    $('.tooltipped').tooltip();
+	});
+</script>
+
+{% endblock content %}

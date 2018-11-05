@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<style type="text/css">
+		.box{
+			transition: box-shadow 0.3s;
+		}
+		.box:hover {
+			box-shadow: z-depth-5;
+		}
+	</style>
+
+<div class="row">
+	<div class="col s12">
+		<div class="card white darken-1 z-depth-4">
+			<div class="card-content black-text">
+				<div class="center-align">
+				<div class="row">
+					<div class="col s12 m4 l4 center ">
+						<img src="{{ product.icon.url }}" class="responsive-img"/>
+					</div>
+					<div class="col s12 m4 l4 center">
+						<span class="card-title"><h3>{{ product.title }}</h3></span>
+					</div>
+					<div class="col s12 m4 l4 center">
+						<br/><br/>
+						<a href="javascript:{document.getElementById('upvote').submit()}" class="responsive-img waves-effect waves-light btn tooltipped" data-position="bottom" data-tooltip="Current Votes: {{ product.votes_total }}"><i class="material-icons left">thumb_up</i>upvote!</a>
+					</div>
+				</div>
+				</div>
+				<div class="row">
+					<div class="col s12 l3 center">
+						<h5>Hunted by: {{ product.hunter.username }}</h4>
+					</div>
+					<div class="col s12 l6 center">
+						<img src="{{ product.image.url }}" class="hoverable responsive-img"/>
+					</div>
+					<div class="col s12 l3 center">
+						<h5 class="valign-wrapper"><i class="material-icons">date_range</i>{{ product.pub_date_pretty }}</h4>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col s8 offset-s2">
+						<p class="flow-text">{{product.body}}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<form id="upvote" method="POST" action="{% url "upvote" product.id %}">
+	{% csrf_token %}
+	<input type="hidden">
+</form>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+	    $('.tooltipped').tooltip();
+	});
+</script>
+{% endblock content %}
+

@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<br>
+{% if error %}
+	<div class="row">
+		<div class="s10 offset-s1 center">
+			<h4 class="red-text darken-3" onclick="M.toast({html: 'Try Again!',classes: 'rounded'})">{{error}}</h4>
+		</div>
+	</div>
+	
+{% endif %}
+<div class="row">
+	<div class="col s12">
+		<div class="card white darken-1">
+			<div class="card-content black-text">
+				<span class="card-title center">Sign Up!</span>
+				<form method="POST" action="{% url "signup" %}">
+					{% csrf_token %}
+					<div class="row">
+						<div class="input-field col s10 offset-s1">
+							<input id="username" type="text" class="validate" name="username">
+							<label for="username">Username</label>
+						</div>
+						<div class="input-field col s10 offset-s1">
+							<input id="password1" type="password" class="validate" name="pass1">
+							<label for="password1">Password</label>
+						</div>
+						<div class="input-field col s10 offset-s1">
+							<input id="password2" type="password" class="validate" name="pass2">
+							<label for="password2">Confirm Password</label>
+						</div>
+					</div>
+					<div class="card-action center">
+						<button class="btn-large waves-effect waves-light cyan darken-3" type="submit" name="action">Sign Up!</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock content %}

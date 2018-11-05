@@ -1,0 +1,591 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"url",
+				"urlpatterns"
+			],
+			[
+				"STAT",
+				"STATIC_ROOT"
+			],
+			[
+				"pro",
+				"product.id"
+			],
+			[
+				"for",
+				"forloop\tDjango template for loop"
+			],
+			[
+				"ac",
+				"action\tAttr"
+			],
+			[
+				"ur",
+				"url\tDjango template url"
+			],
+			[
+				"prod",
+				"product.title"
+			],
+			[
+				"deta",
+				"detail"
+			],
+			[
+				"portfo",
+				"protfolio"
+			],
+			[
+				"detail",
+				"detailblog"
+			],
+			[
+				"get",
+				"get_object_or_404"
+			],
+			[
+				"st",
+				"style\tTag"
+			],
+			[
+				"sta",
+				"static"
+			],
+			[
+				"port",
+				"portfolio\t(home.html)"
+			],
+			[
+				"MEDI",
+				"MEDIA_URL"
+			],
+			[
+				"os",
+				"os.path.join"
+			],
+			[
+				"so",
+				"sortedwords"
+			],
+			[
+				"sort",
+				"sortedwords"
+			],
+			[
+				"sor",
+				"sorted〔function〕"
+			],
+			[
+				"count",
+				"countw"
+			],
+			[
+				"wor",
+				"worddict\t(views.py)"
+			],
+			[
+				"word",
+				"worddict"
+			],
+			[
+				"wo",
+				"worddict"
+			],
+			[
+				"coun",
+				"countwords\t(views.py)"
+			],
+			[
+				"name",
+				"name='home"
+			],
+			[
+				"a",
+				"action\tAttr"
+			],
+			[
+				"re",
+				"request"
+			],
+			[
+				"user",
+				"username"
+			],
+			[
+				"Char",
+				"CharField"
+			],
+			[
+				"exten",
+				"extends"
+			],
+			[
+				"temp",
+				"template_name"
+			],
+			[
+				"myapp",
+				"myapp.views"
+			],
+			[
+				"pa",
+				"patterns"
+			],
+			[
+				"templ",
+				"template"
+			],
+			[
+				"cla",
+				"class"
+			],
+			[
+				"mode",
+				"models"
+			],
+			[
+				"max",
+				"max_length"
+			],
+			[
+				"models",
+				"models.CharField"
+			],
+			[
+				"exte",
+				"extends\textends"
+			],
+			[
+				"block",
+				"block\tDjango template block"
+			],
+			[
+				"els",
+				"else\tDjango template else part of if statement"
+			],
+			[
+				"elif",
+				"elif\tDjango template elif part of if statement"
+			],
+			[
+				"val",
+				"value2"
+			],
+			[
+				"value",
+				"value1"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "accounts/views.py",
+			"settings":
+			{
+				"buffer_size": 1193,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "cfehome/settings.py",
+			"settings":
+			{
+				"buffer_size": 3441,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/C++/C++ Single File.sublime-build",
+				"Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/AjayJindal/Desktop/cfehome/src"
+	],
+	"file_history":
+	[
+		"/Users/AjayJindal/Desktop/cfehome/src/cfehome/urls.py",
+		"/Users/AjayJindal/Desktop/cfehome/src/unlocker/urls.py",
+		"/Users/AjayJindal/Desktop/cfehome/src/unlocker/views.py",
+		"/Users/AjayJindal/Desktop/cfehome/src/cfehome/settings.py",
+		"/Users/AjayJindal/Desktop/cfehome/src/accounts/urls.py",
+		"/Users/AjayJindal/Desktop/cfehome/src/pro.sublime-project",
+		"/Users/AjayJindal/Downloads/multilayer.py",
+		"/Users/AjayJindal/Desktop/django/repos/product-hunt-project/products/views.py",
+		"/Users/AjayJindal/Desktop/django/repos/product-hunt-project/products/templates/products/detail.html",
+		"/Users/AjayJindal/Desktop/django/repos/product-hunt-project/products/templates/products/home.html",
+		"/Users/AjayJindal/Desktop/django/repos/product-hunt-project/producthunt/templates/base.html",
+		"/Users/AjayJindal/Desktop/django/repos/product-hunt-project/products/urls.py",
+		"/Users/AjayJindal/Desktop/django/repos/product-hunt-project/products/models.py",
+		"/Users/AjayJindal/Desktop/Thapar edu/subjects/Sem 5/Soft. Engineering/Project/final.py",
+		"/Users/AjayJindal/Downloads/nand.py",
+		"/Users/AjayJindal/Downloads/xor.py",
+		"/Users/AjayJindal/Downloads/perceptron.py",
+		"/Users/AjayJindal/Desktop/django/repos/portfolio/jobs/templates/jobs/home.html",
+		"/Users/AjayJindal/Desktop/django/repos/portfolio/blog/templates/blog/allblogs.html",
+		"/Users/AjayJindal/Desktop/django/repos/portfolio/blog/urls.py",
+		"/Users/AjayJindal/Desktop/django/repos/portfolio/blog/admin.py",
+		"/Users/AjayJindal/Desktop/django/repos/portfolio/blog/views.py",
+		"/Users/AjayJindal/Desktop/django/repos/portfolio/portfolio/urls.py",
+		"/Users/AjayJindal/Desktop/django/repos/portfolio/manage.py",
+		"/Users/AjayJindal/Desktop/django/repos/portfolio/static/admin/js/calendar.js",
+		"/Users/AjayJindal/Desktop/django/repos/portfolio/static/admin/js/collapse.min.js",
+		"/Users/AjayJindal/Desktop/django/repos/portfolio/static/admin/js/core.js",
+		"/Users/AjayJindal/Desktop/django/repos/portfolio/static/admin/js/inlines.min.js",
+		"/Users/AjayJindal/Desktop/django/repos/portfolio/static/admin/js/vendor/jquery/jquery.js",
+		"/Users/AjayJindal/Desktop/django/repos/portfolio/static/admin/js/vendor/jquery/jquery.min.js",
+		"/Users/AjayJindal/Desktop/django/repos/portfolio/static/admin/js/vendor/select2/select2.full.js",
+		"/Users/AjayJindal/Desktop/django/repos/portfolio/static/admin/js/vendor/select2/select2.full.min.js",
+		"/Users/AjayJindal/Desktop/django/repos/portfolio/static/admin/js/vendor/xregexp/xregexp.js",
+		"/Users/AjayJindal/Desktop/django/repos/portfolio/static/admin/js/vendor/xregexp/xregexp.min.js",
+		"/Users/AjayJindal/Desktop/django/repos/portfolio/portfolio/wsgi.py",
+		"/Users/AjayJindal/Desktop/django/repos/protfolio/protfolio/settings.py",
+		"/Users/AjayJindal/Desktop/django/repos/portfolio/portfolio/settings.py",
+		"/Users/AjayJindal/Desktop/django/repos/protfolio/.gitignore",
+		"/Users/AjayJindal/Desktop/django/repos/protfolio/blog/views.py",
+		"/Users/AjayJindal/Desktop/django/repos/protfolio/blog/urls.py",
+		"/Users/AjayJindal/Desktop/django/repos/protfolio/blog/models.py",
+		"/Users/AjayJindal/Desktop/django/repos/protfolio/blog/templates/blog/detail.html",
+		"/Users/AjayJindal/Desktop/django/repos/protfolio/jobs/templates/jobs/home.html",
+		"/Users/AjayJindal/Desktop/django/repos/protfolio/blog/templates/blog/allblogs.html",
+		"/Users/AjayJindal/Desktop/django/repos/protfolio/protfolio/urls.py",
+		"/Users/AjayJindal/Desktop/django/repos/protfolio/jobs/views.py",
+		"/Users/AjayJindal/Desktop/django/repos/protfolio/protfolio/views.py",
+		"/Users/AjayJindal/Desktop/django/repos/protfolio/jobs/models.py",
+		"/Users/AjayJindal/Desktop/django/repos/protfolio/jobs/templates/jobs/index.html",
+		"/Users/AjayJindal/Desktop/django/repos/protfolio/templates/home.html",
+		"/Users/AjayJindal/Desktop/django/repos/protfolio/blog/admin.py",
+		"/Users/AjayJindal/Desktop/django/repos/protfolio/views.py",
+		"/Users/AjayJindal/Desktop/django/wordcount-project/wordcount/settings.py",
+		"/Users/AjayJindal/Desktop/django/wordcount-project/templates/home.html",
+		"/Users/AjayJindal/Desktop/django spis.py",
+		"/Users/AjayJindal/Downloads/small 2/in/input1.txt",
+		"/Users/AjayJindal/Downloads/small 2/in/input2.txt",
+		"/Users/AjayJindal/Downloads/small 2/in/input3.txt",
+		"/Users/AjayJindal/Desktop/oyo ques.cpp",
+		"/Users/AjayJindal/Desktop/cake.cpp",
+		"/Users/AjayJindal/Downloads/small/in/input2.txt",
+		"/Users/AjayJindal/Downloads/small/in/input3.txt",
+		"/Users/AjayJindal/Downloads/small/in/input1.txt",
+		"/Users/AjayJindal/Desktop/Thapar edu/subjects/Sem 6/Capstone/CaptureImages-master/capture.py",
+		"/Users/AjayJindal/Downloads/small 5/in/input1.txt",
+		"/Users/AjayJindal/Downloads/small 4/in/input3.txt",
+		"/Users/AjayJindal/Downloads/small 5/in/input3.txt",
+		"/Users/AjayJindal/Downloads/small 4/in/input1.txt",
+		"/Users/AjayJindal/Downloads/small 4/in/input2.txt",
+		"/Users/AjayJindal/Downloads/small 3/in/input2.txt",
+		"/Users/AjayJindal/Downloads/small 3/in/input3.txt",
+		"/Users/AjayJindal/Desktop/split LL.cpp",
+		"/Users/AjayJindal/Downloads/small 7/in/input1.txt",
+		"/Users/AjayJindal/Downloads/small 7/in/input2.txt",
+		"/Users/AjayJindal/Downloads/small 7/in/input3.txt",
+		"/Users/AjayJindal/Downloads/small 6/in/input3.txt",
+		"/Users/AjayJindal/Desktop/as.cpp",
+		"/Users/AjayJindal/Desktop/TEST_equal sum pair.cpp",
+		"/Users/AjayJindal/Desktop/TEST_Find smallest substring.cpp",
+		"/Users/AjayJindal/Desktop/TEST_max profit on app.cpp",
+		"/Users/AjayJindal/Desktop/nearest repetition.cpp",
+		"/Users/AjayJindal/Desktop/longest subset.cpp",
+		"/Users/AjayJindal/Desktop/Make Strings Anagram.cpp",
+		"/Users/AjayJindal/Downloads/Small 5/in/input2.txt",
+		"/Users/AjayJindal/Downloads/small 5/in/input2.txt",
+		"/Users/AjayJindal/Downloads/small 4/in/input4.txt",
+		"/Users/AjayJindal/Downloads/small 3/in/input1.txt",
+		"/Users/AjayJindal/Downloads/TotalFinder_1.10.10[macOS]/SN.txt",
+		"/Users/AjayJindal/Downloads/small 8/in/input3.txt",
+		"/Users/AjayJindal/Downloads/small 8/in/input1.txt",
+		"/Users/AjayJindal/Downloads/small 7/in/input4.txt",
+		"/Users/AjayJindal/Downloads/small 6/in/input2.txt",
+		"/Users/AjayJindal/Downloads/small 6/in/input1.txt",
+		"/Users/AjayJindal/Downloads/Small 5/in/input1.txt",
+		"/Users/AjayJindal/Downloads/Small 5/in/input3.txt",
+		"/Users/AjayJindal/Downloads/Small 5/in/input4.txt",
+		"/Users/AjayJindal/Desktop/AJAY/family work/Telenet/telenet doctor/telenetdoctor_app_english.txt",
+		"/Users/AjayJindal/Desktop/AJAY/family work/Telenet/final telenet doctor/telenetdoctor_app_english.txt",
+		"/Users/AjayJindal/Downloads/pitch.txt",
+		"/Users/AjayJindal/Desktop/Thapar edu/subjects/Sem 6/NLP/Lab project/final.py",
+		"/Users/AjayJindal/Desktop/capsnet/CapsNet-Tensorflow/main.py",
+		"/Users/AjayJindal/Desktop/Thapar edu/subjects/Sem 6/Data Analytics/LABS/New Folder With Items/labses7.R",
+		"/Users/AjayJindal/Desktop/Thapar edu/subjects/Sem 6/Data Analytics/LABS/New Folder With Items/labses10.R",
+		"/Users/AjayJindal/Downloads/counter.v",
+		"/Users/AjayJindal/Downloads/blocknon.v",
+		"/Users/AjayJindal/Downloads/srflipflop.v",
+		"/Users/AjayJindal/Downloads/jkflipflop.v",
+		"/Users/AjayJindal/Desktop/test.v",
+		"/Users/AjayJindal/Desktop/traffic.v",
+		"/Volumes/Matlab_R2018a_Crack/Proper_Installation.txt",
+		"/Users/AjayJindal/Downloads/LightCapsNet-master/Capsule/Main_MNIST_Conv_Capsules.m",
+		"/Users/AjayJindal/Downloads/LightCapsNet-master/Capsule/Main_MNIST_MLP_DynamicRoutingCapsules.m",
+		"/Users/AjayJindal/Downloads/LightCapsNet-master/Capsule/Main_MNIST_MLP_Capsules.m",
+		"/Users/AjayJindal/Downloads/LightCapsNet-master/RunAll.m",
+		"/Users/AjayJindal/Downloads/LightCapsNet-master/CoreModules/net/Main_Template.m",
+		"/Users/AjayJindal/Desktop/Thapar edu/subjects/Sem 6/Data Analytics/LABS/Lab Session-5.R",
+		"/Users/AjayJindal/Desktop/Thapar edu/subjects/Sem 6/Data Analytics/LABS/Lab Session-5.txt",
+		"/Users/AjayJindal/Downloads/telenetdoctor_app_english.txt",
+		"/Users/AjayJindal/Desktop/Thapar edu/subjects/Sem 6/NLP/regularlab.py",
+		"/Users/AjayJindal/Desktop/regularlab.py",
+		"/Users/AjayJindal/Desktop/lab2.py",
+		"/Users/AjayJindal/Downloads/drive-download-20180418T145306Z-001/q10.asm",
+		"/Users/AjayJindal/Downloads/drive-download-20180418T145306Z-001/q7.asm",
+		"/Users/AjayJindal/Downloads/drive-download-20180418T145306Z-001/q5.5.asm",
+		"/Users/AjayJindal/Downloads/drive-download-20180418T145306Z-001/q5.4.asm",
+		"/Users/AjayJindal/Downloads/drive-download-20180418T145306Z-001/q5.3.asm",
+		"/Users/AjayJindal/Downloads/drive-download-20180418T145306Z-001/q5.2.asm",
+		"/Users/AjayJindal/Downloads/drive-download-20180418T145306Z-001/q5.1.asm"
+	],
+	"find":
+	{
+		"height": 32.0
+	},
+	"find_in_files":
+	{
+		"height": 158.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "accounts/views.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1193,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								961,
+								961
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 24.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "cfehome/settings.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3441,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2908,
+								2908
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2303.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 32.0
+	},
+	"input":
+	{
+		"height": 70.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 292.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "pro.sublime-project",
+	"replace":
+	{
+		"height": 60.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 172.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -1,0 +1,95 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>F-Unlock</title>
+	<!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<style type="text/css">
+		.logo{
+			margin-top: 15%;
+			width: 50px;
+		}
+	</style>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.js" integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA=" crossorigin="anonymous"></script>
+</head>
+<body class="blue-grey lighten-5">
+	<nav class="teal lighten-5">
+		<div class="container nav-wrapper">
+			<a href="{% url "home" %}" class="brand-logo center"><img class="logo responsive-img" src="{% static "logo.png" %}"></a> 
+			<a href="{% url "home" %}" class="flow-text black-text">F-Unlock</a>
+			<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons black-text">menu</i></a>
+			<ul id="nav-mobile" class="right hide-on-med-and-down">
+				{% if user.is_authenticated %}
+					{# <li><a href="{% url "create" %}" class="black-text"><i class="material-icons black-text">control_point</i></a></li> #}
+					<li><a href="javascript:{document.getElementById('logout').submit()}" class="black-text">Logout</a></li>
+					<form id="logout" method="POST" action="{% url "logout" %}">
+						{% csrf_token %}
+						<input type="hidden" />
+					</form>
+				{% else %}
+				    <li><a href="{% url "signup" %}" class="black-text">Sign Up</a></li>
+					<li><a href="{% url "login" %}" class="black-text">Login</a></li>
+				{% endif %}
+				
+			</ul>
+		</div>
+	</nav>
+	<ul class="sidenav" id="mobile-demo">
+		<li><a href="{% url "signup" %}">Sign Up</a></li>
+		<li><a href="{% url "login" %}">Login</a></li>
+	</ul>
+	<br>
+	<div class="container">
+		{% block content %}
+		    
+		{% endblock content %}
+	</div>
+	<br>
+	<footer class="page-footer cyan darken-3">
+		<div class="container">
+			<div class="row">
+				<div class="col l11 s12">
+					<h5 class="white-text">F-Unlock</h5>
+					<p class="grey-text text-lighten-4">The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.The quick brown fox jumps over the lazy dog.The quick brown fox jumps over the lazy dog.The quick brown fox jumps over the lazy dog.The quick brown fox jumps over the lazy dog.</p>
+				</div>
+				<div class="col l1 s12">
+					<h5 class="white-text">Links</h5>
+					<ul>
+						<li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+						<li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="footer-copyright">
+			<div class="container">
+				© {% now "Y" %} Copyright by F-Unlock | <a class="yellow-text" href="http://www.thapar.edu/" target="_blank">Thapar Institute of Engineering & Technology</a>
+				<a class="grey-text text-lighten-4 right" href="{% url "home" %}">home</a>
+			</div>
+		</div>
+	</footer>
+
+
+	<script type="text/javascript">
+	var elem = document.querySelector('.sidenav');
+	var instance = M.Sidenav.init(elem, {
+		inDuration: 400,
+		outDuration: 100,
+		edge: 'left'
+	});
+	$(document).ready(function(){
+	    $('.tooltipped').tooltip();
+	});
+	  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.tooltipped');
+    var instances = M.Tooltip.init(elems, options);
+  });
+	</script>
+	<!-- Compiled and minified JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	
+</body>
+</html>
