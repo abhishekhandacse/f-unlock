@@ -183,24 +183,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "accounts/views.py",
-			"settings":
-			{
-				"buffer_size": 1193,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "cfehome/settings.py",
-			"settings":
-			{
-				"buffer_size": 3441,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -270,10 +252,12 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/AjayJindal/Desktop/cfehome/src"
+		"/Users/AjayJindal/Desktop/f-unlock/cfehome",
+		"/Users/AjayJindal/Desktop/f-unlock/cfehome/src"
 	],
 	"file_history":
 	[
+		"/Users/AjayJindal/Desktop/f-unlock/.gitignore",
 		"/Users/AjayJindal/Desktop/cfehome/src/cfehome/urls.py",
 		"/Users/AjayJindal/Desktop/cfehome/src/unlocker/urls.py",
 		"/Users/AjayJindal/Desktop/cfehome/src/unlocker/views.py",
@@ -400,8 +384,7 @@
 		"/Users/AjayJindal/Downloads/drive-download-20180418T145306Z-001/q5.5.asm",
 		"/Users/AjayJindal/Downloads/drive-download-20180418T145306Z-001/q5.4.asm",
 		"/Users/AjayJindal/Downloads/drive-download-20180418T145306Z-001/q5.3.asm",
-		"/Users/AjayJindal/Downloads/drive-download-20180418T145306Z-001/q5.2.asm",
-		"/Users/AjayJindal/Downloads/drive-download-20180418T145306Z-001/q5.1.asm"
+		"/Users/AjayJindal/Downloads/drive-download-20180418T145306Z-001/q5.2.asm"
 	],
 	"find":
 	{
@@ -436,69 +419,8 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "accounts/views.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1193,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								961,
-								961
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 24.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "cfehome/settings.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3441,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2908,
-								2908
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2303.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -583,7 +505,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 172.0,
+	"side_bar_width": 227.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
