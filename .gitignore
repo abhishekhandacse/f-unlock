@@ -13,7 +13,7 @@ media
 
 
 
-cfehome/static-root/
+# cfehome/static-root/
 
 ### Django.Python Stack ###
 # Byte-compiled / optimized / DLL files
