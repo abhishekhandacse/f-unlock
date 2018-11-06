@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 
 {% block content %}
+<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+
 <style type="text/css">
 	.slewedBox3{
 		position: absolute;	
@@ -42,6 +44,19 @@
 						<div class="input-field col s10 offset-s1">
 							<input id="username" type="text" class="validate" name="username">
 							<label for="username">Username</label>
+						</div>
+						<div class="input-field col s10 offset-s1">
+							<input id="firstname" type="text" class="validate" name="firstname">
+							<label for="firstname">First Name</label>
+						</div>
+						<div class="input-field col s10 offset-s1">
+							<input id="lastname" type="text" class="validate" name="lastname">
+							<label for="lastname">Last Name</label>
+						</div>
+						<div class="input-field col s10 offset-s1">
+							<input id="email" type="email" class="validate" name="email">
+							<label for="email">Email</label>
+							<span class="helper-text" data-error="ᕙ(⇀‸↼‶)ᕗ" data-success="♥‿♥">( ͡° ͜ʖ ͡°)</span>
 						</div>
 						<div class="input-field col s10 offset-s1">
 							<input id="password1" type="password" class="validate" name="pass1">
