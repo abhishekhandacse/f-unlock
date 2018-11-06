@@ -23,6 +23,10 @@
 	.content-banner{
 		transform: skew(0deg, 6deg);
 	}
+	.rounded{
+		border-radius: 30px;
+		height: 260px;
+	}
 </style>
 
 <div class="slewedBox">
@@ -33,47 +37,47 @@
 <div class="container">
 	<div class="row">
 		<div class="col s12 m8 ">
-			<h3 class="white-text">A door unlocking system based on facial recognition</h3>
+			<h3 class="white-text">An Unlocking System based on FACIAL recognition</h3>
 			<div class="flow-text white-text">
-			  <blockquote>Smart lock using Face Recognition.<br>
-			  Connected to Raspberry Pi for lock-relay operation.<br>
-			  Consists of real time web app & mobile application.<br>
-			  Theft prevention during unauthorized access.</blockquote>
+				<blockquote>Smart lock using Face Recognition.<br>
+					Connected to Raspberry Pi for lock-relay operation.<br>
+					Consists of real time web app<br>
+				Theft prevention during unauthorized access.</blockquote>
 			</div>
 		</div>
-			<div class="col s12 m4">
-				<br>
-				<img class="responsive-img" src="{% static "logo2.png" %}">
-			</div>
+		<div class="col s12 m4">
+			<br>
+			<img class="responsive-img" src="{% static "logo2.png" %}">
+		</div>
 	</div>
-		<div class="row ">
-			<div class="col s12 m4 ">
-				<div class="card-panel grey lighten-5 z-depth-5" id="arrow">
-					<span class="flow-text valign-wrapper">1. Registration &#8291; &#8291;<i class="small material-icons">cloud_download</i></span>
-					<p>Input of Face data into Database</p>
-					<br>
-					<span class="flow-text valign-wrapper">2. Finding the face &#8291;<i class="small material-icons">search</i></span>
-					<p>Camera will keep looking for a new face to recognize.</p>
-				</div>
-			</div>
-			<div class="col s12 m4 ">
-				<div class=" card-panel grey lighten-5 z-depth-5" id="arrow">
-					<span class="flow-text valign-wrapper">3. Capture new face &#8291; &#8291;<i class="small material-icons">center_focus_strong</i></span>
-					<p>Take multiple shots to check if it is a trusted face</p>
-					<span class="flow-text valign-wrapper">4. Open the lock? &#8291;<i class="small material-icons">lock_open</i></span>
-					<p>Lock opens if there is a trusted person</p>
-				</div>
-			</div>
-			<div class="col s12 m4 ">
-				<div class=" card-panel grey lighten-5 z-depth-5" id="arrow">
-					<span class="flow-text valign-wrapper">5. Reinforce &#8291; &#8291;<i class="small material-icons">update</i></span>
-					<p>Incorporate the new face data to improve reliability over time.</p>
-					<span class="flow-text valign-wrapper">6. Success &#8291;<i class="small material-icons">done_all</i></span>
-					<p>Keep On Repeating!</p>
-					<br>
-				</div>
+	<div class="row ">
+		<div class="col s12 m4 ">
+			<div class="card-panel grey lighten-5 z-depth-5 rounded" id="arrow">
+				<span class="flow-text valign-wrapper">1. Registration &#8291; &#8291;<i class="small material-icons">cloud_download</i></span>
+				<p>Input of Face data into Database</p>
+				<br>
+				<span class="flow-text valign-wrapper">2. Finding the face &#8291;<i class="small material-icons">search</i></span>
+				<p>Camera will keep looking for a new face to recognize.</p>
 			</div>
 		</div>
+		<div class="col s12 m4 ">
+			<div class=" card-panel grey lighten-5 z-depth-5 rounded" id="arrow">
+				<span class="flow-text valign-wrapper">3. Capture new face &#8291;<i class="small material-icons">center_focus_strong</i></span>
+				<p>Take multiple shots to check if it is a trusted face</p>
+				<span class="flow-text valign-wrapper">4. Open the lock? &#8291;<i class="small material-icons">lock_open</i></span>
+				<p>Lock opens if there is a trusted person</p>
+			</div>
+		</div>
+		<div class="col s12 m4 ">
+			<div class=" card-panel grey lighten-5 z-depth-5 rounded" id="arrow">
+				<span class="flow-text valign-wrapper">5. Reinforce &#8291; &#8291;<i class="small material-icons">update</i></span>
+				<p>Incorporate the new face data to improve reliability over time.</p>
+				<span class="flow-text valign-wrapper">6. Success &#8291;<i class="small material-icons">done_all</i></span>
+				<p>Keep On Repeating!</p>
+				<br>
+			</div>
+		</div>
+	</div>
 </div>
 
 {% endblock content %}
