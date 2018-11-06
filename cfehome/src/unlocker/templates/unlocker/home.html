@@ -3,7 +3,17 @@
 
 {% block content %}
 <style type="text/css">
-	
+	.box{
+		transition: all 0.3s ease-in-out;
+	}
+	.box:hover {
+		transform: scale(1.1);
+		box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+	}
+	.ico{
+		position: relative;
+		top: 12px;
+	}
 </style>
 
 <div class="slewedBox">
@@ -27,7 +37,7 @@
 	</div>
 	<div class="row ">
 		<div class="col s12 m4 ">
-			<div class="card-panel grey lighten-5 z-depth-5 rounded" id="arrow">
+			<div class="card-panel grey lighten-5 z-depth-5 rounder" id="arrow">
 				<span class="flow-text valign-wrapper">1. Registration &#8291; &#8291;<i class="small material-icons">cloud_download</i></span>
 				<p>Input of Face data into Database</p>
 				<br>
@@ -36,7 +46,7 @@
 			</div>
 		</div>
 		<div class="col s12 m4 ">
-			<div class=" card-panel grey lighten-5 z-depth-5 rounded" id="arrow">
+			<div class=" card-panel grey lighten-5 z-depth-5 rounder" id="arrow">
 				<span class="flow-text valign-wrapper">3. Capture new face &#8291;<i class="small material-icons">center_focus_strong</i></span>
 				<p>Take multiple shots to check if it is a trusted face</p>
 				<span class="flow-text valign-wrapper">4. Open the lock? &#8291;<i class="small material-icons">lock_open</i></span>
@@ -44,7 +54,7 @@
 			</div>
 		</div>
 		<div class="col s12 m4 ">
-			<div class=" card-panel grey lighten-5 z-depth-5 rounded" id="arrow">
+			<div class=" card-panel grey lighten-5 z-depth-5 rounder" id="arrow">
 				<span class="flow-text valign-wrapper">5. Reinforce &#8291; &#8291;<i class="small material-icons">update</i></span>
 				<p>Incorporate the new face data to improve reliability over time.</p>
 				<span class="flow-text valign-wrapper">6. Success &#8291;<i class="small material-icons">done_all</i></span>
@@ -56,9 +66,36 @@
 	<br><br><br><br><br>
 	<div class="row center">
 			<i class="small material-icons offset">pets</i>
+			{% if user.is_authenticated %}
+			<span class="call-action"> &#8291; Take me to my panel! &#8291; &#8291; &#8291;</span>
+			<a href="{% url "panel" %}" class="red accent-4 z-depth-3 waves-effect waves-light btn-large oval">Let's Go!</a>
+			{% else %}
 			<span class="call-action"> &#8291; Login to your panel! &#8291; &#8291; &#8291;</span>
 			<a href="{% url "login" %}" class="cyan accent-4 z-depth-3 waves-effect waves-light btn-large oval">Login!</a>
-
+			{% endif %}
+	</div>
+	<br><br><br>
+	<div class="row center">
+		<h2><i class="medium material-icons ico">group</i> &#8291;Team</h2>
+	</div>
+	<div class="row">
+		<div class="col 12 m10 offset-m1 center">
+			<div class="col s12 m4">
+				<img class="responsive-img circle box" src="{% static "ajay.jpg" %}">
+				<h5 class="">Ajay Jindal</h5>
+				<p>101503016</p>
+			</div>
+			<div class="col s12 m4">
+				<img class="responsive-img circle box" src="{% static "salwan.jpg" %}">
+				<h5 class="">Abhishek Salwan</h5>
+				<p>101503007</p>
+			</div>
+			<div class="col s12 m4">
+				<img class="responsive-img circle box" src="{% static "handa.jpg" %}">
+				<h5 class="">Abhishek Handa</h5>
+				<p>101503006</p>
+			</div>
+		</div>
 	</div>
 </div>
 <br><br><br><br>

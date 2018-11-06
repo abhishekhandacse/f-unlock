@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>F-Unlock</title>
+	<title>{% block title %}F-Unlock{% endblock title %}</title>
 	<!-- Compiled and minified CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -12,7 +12,6 @@
 			width: 50px;
 		}
 		.foot-color{
-			/*background-image: linear-gradient(to bottom right, #7d71dd, #2d208e);*/
 			background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 		}
 		#arrow {
@@ -35,7 +34,7 @@
 		.content-banner{
 			transform: skew(0deg, 6deg);
 		}
-		.rounded{
+		.rounder{
 			border-radius: 30px;
 			height: 260px;
 		}
@@ -53,13 +52,14 @@
 		}
 	</style>
 
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.js" integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA=" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.js"></script>
 </head>
 <body class="blue-grey lighten-5">
 	<nav class="white z-depth-2">
 		<div class="container nav-wrapper ">
-			<a href="{% url "home" %}" class="brand-logo center"><img class="logo responsive-img" src="{% static "logo.png" %}"></a> 
+			{% block logolink %}
 			<a href="{% url "home" %}" class="flow-text black-text">F-Unlock</a>
+			{% endblock logolink %}
 			<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons black-text">menu</i></a>
 			<ul id="nav-mobile" class="right hide-on-med-and-down">
 				{% if user.is_authenticated %}
@@ -77,8 +77,16 @@
 		</div>
 	</nav>
 	<ul class="sidenav" id="mobile-demo">
-		<li><a href="{% url "signup" %}">Sign Up</a></li>
-		<li><a href="{% url "login" %}">Login</a></li>
+		{% if user.is_authenticated %}
+			<li><a href="javascript:{document.getElementById('logout').submit()}" class="black-text">Logout</a></li>
+			<form id="logout" method="POST" action="{% url "logout" %}">
+				{% csrf_token %}
+				<input type="hidden" />
+			</form>
+		{% else %}
+		    <li><a href="{% url "login" %}">Login</a></li>
+			<li><a href="{% url "signup" %}">Sign Up</a></li>
+		{% endif %}
 	</ul>
 	<br>
 
@@ -113,22 +121,19 @@
 
 
 	<script type="text/javascript">
-	var elem = document.querySelector('.sidenav');
-	var instance = M.Sidenav.init(elem, {
-		inDuration: 400,
-		outDuration: 100,
-		edge: 'left'
-	});
-	$(document).ready(function(){
-	    $('.tooltipped').tooltip();
-	});
-	  document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.tooltipped');
-    var instances = M.Tooltip.init(elems, options);
-  });
+		$(document).ready(function(){
+		    $('.sidenav').sidenav();
+		});
+		$(document).ready(function(){
+		    $('.tooltipped').tooltip();
+		});
+		  document.addEventListener('DOMContentLoaded', function() {
+	    var elems = document.querySelectorAll('.tooltipped');
+	    var instances = M.Tooltip.init(elems, options);
+		  });
 	</script>
 	<!-- Compiled and minified JavaScript -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 	
 </body>
 </html>

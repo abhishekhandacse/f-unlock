@@ -22,7 +22,7 @@ def login(request):
 		user = auth.authenticate(username=request.POST['username'],password=request.POST['pass'])
 		if user is not None:
 			auth.login(request, user)
-			return redirect('home')
+			return redirect('panel')
 		else:
 			return render(request, 'accounts/login.html',{'error':'Incorrect info!'})
 	else:	
