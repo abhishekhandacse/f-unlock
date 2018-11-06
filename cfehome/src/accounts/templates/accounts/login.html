@@ -1,39 +1,56 @@
 {% extends "base.html" %}
 
 {% block content %}
+<style type="text/css">
+	.slewedBox2{
+		position: absolute;	
+		background-image: linear-gradient(to bottom right, #281d87, #7c6dff);
+		width: 100%;
+		height: 60%;
+		padding: 200px 0;
+		transform: skew(0deg, 6deg) translateY(-190px);
+		z-index: -1;
+	}
+</style>
 <br>
-{% if error %}
-	<div class="row">
-		<div class="s10 offset-s1 center">
-			<h4 class="red-text darken-3" onclick="M.toast({html: 'Try Again!',classes: 'rounded'})">{{error}}</h4>
+<div class="slewedBox2">
+</div>
+<br><br>
+<div class="container">
+	{% if error %}
+		<div class="row">
+			<div class="s10 offset-s1 center">
+				<h4 class="red-text darken-3" onclick="M.toast({html: 'Try Again!',classes: 'rounded'})">{{error}}</h4>
+			</div>
 		</div>
-	</div>
-{% endif %}
+	{% endif %}
 
-<div class="row">
-	<div class="col s12">
-		<div class="card white darken-1">
-			<div class="card-content black-text">
-				<span class="card-title center">Sign In!</span>
-				<form method="POST" action="{% url "login" %}">
-					{% csrf_token %}
-					<div class="row">
-						<div class="input-field col s10 offset-s1">
-							<input id="username" type="text" class="validate" name="username">
-							<label for="username">Username</label>
+	<div class="row">
+		<div class="col s12 m8 offset-m2">
+			<div class="card white darken-1 z-depth-5">
+				<div class="card-content black-text">
+					<span class="card-title center">Log In!</span>
+					<form method="POST" action="{% url "login" %}">
+						{% csrf_token %}
+						<div class="row">
+							<div class="input-field col s10 offset-s1">
+								<input id="username" type="text" class="validate" name="username">
+								<label for="username">Username</label>
+							</div>
+							<div class="input-field col s10 offset-s1">
+								<input id="password" type="password" class="validate" name="pass">
+								<label for="password">Password</label>
+							</div>
 						</div>
-						<div class="input-field col s10 offset-s1">
-							<input id="password" type="password" class="validate" name="pass">
-							<label for="password">Password</label>
+						<div class="card-action center">
+							<br>
+							<button class="btn-large waves-effect waves-light cyan darken-3 oval foot-color z-depth-3" type="submit" name="action">Login</button>
 						</div>
-					</div>
-					<div class="card-action center">
-						<button class="btn-large waves-effect waves-light cyan darken-3" type="submit" name="action">Login</button>
-					</div>
-				</form>
+					</form>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
-
+<br><br><br>
 {% endblock content %}
