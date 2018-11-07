@@ -2,41 +2,47 @@
 {% load staticfiles %}
 {% block title %}My Panel{% endblock title %}
 {% block logolink %}
-<a href="{% url "panel" %}" class="flow-text black-text">F-Unlock</a>
+<a href="{% url "panel" %}" class="flow-text black-text"><img class="top-logo" src="{% static "top-logo.png" %}"></a>
 {% endblock logolink %}
 
 {% block content %}
 <style type="text/css">
-	.slewedBox1{
-		position: absolute;	
-background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
-		width: 100%;
-		height: 40%;
-		padding: 200px 0;
-		transform: skew(0deg, -3deg) translateY(-190px);
-		z-index: -1;
-	}
-	.my-pic{
-		position: relative;
-		top: -50px;
-	}
-	.box{
-		transition: all 0.2s ease-in-out;
-	}
-	.box:hover {
-		transform: scale(1.1);
-		box-shadow: 0 5px 100px rgba(0,0,0,0.5);
-	}
-	.larger{
-		width: 100%;
-		border-radius: 100px;
-	}
-	.btn-color{
-		background-image: linear-gradient(to right, #ed6ea0 0%, #ec8c69 100%);
-	}
-	.btn-color-2{
-background-image: linear-gradient(-225deg, #A445B2 0%, #D41872 52%, #FF0066 100%);
-	}
+.slewedBox1{
+	position: absolute;	
+	background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
+	width: 100%;
+	height: 40%;
+	padding: 200px 0;
+	transform: skew(0deg, -3deg) translateY(-190px);
+	z-index: -1;
+}
+.my-pic{
+	position: relative;
+	top: -50px;
+}
+.box{
+	transition: all 0.2s ease-in-out;
+}
+.box:hover {
+	transform: scale(1.1);
+	box-shadow: 0 5px 100px rgba(0,0,0,0.5);
+}
+.larger{
+	width: 100%;
+	border-radius: 100px;
+}
+.btn-color{
+	background-image: linear-gradient(to right, #ed6ea0 0%, #ec8c69 100%);
+}
+.btn-color-2{
+	background-image: linear-gradient(-225deg, #A445B2 0%, #D41872 52%, #FF0066 100%);
+}
+.img-size{
+	height: 100px;
+	position: relative;
+	top: 30px;
+	left: 30px
+}
 </style>
 <div class="slewedBox1">
 </div>
@@ -47,28 +53,48 @@ background-image: linear-gradient(-225deg, #A445B2 0%, #D41872 52%, #FF0066 100%
 			<div class="col s12 m10 offset-m1">
 				<div class="col s8 offset-s2 m4 offset-m4 center">
 					<img class="responsive-img circle my-pic box z-depth-5" src="{% static "ajay.jpg" %}">
-			        <span class="card-title">Ajay Jindal</span>
+					<span class="card-title">Ajay Jindal</span>
 				</div>
 			</div>
 		</div>
-        <div class="center row">
-        	<div class="col s12 m6 offset-m3 l4 offset-l4">
-	        	<a class="waves-effect waves-light btn-large larger btn-color">Unlock my Door!</a>
-	        </div>
-        </div>
-        <div class="center row">
-        	<div class="col s12 m6 offset-m3 l4 offset-l4">
-	        	<a class="waves-effect waves-light btn-large larger btn-color-2">SUDO Unlock my Door!</a>
-	        </div>
-        </div>
-        <div class="center row">
-        	<div class="col s12 m6 offset-m3 l4 offset-l4">
-	        	<a class="waves-effect waves-light btn-large larger btn-color">Unlock my Door!</a>
-	        </div>
-        </div>
-        <br><br>
+		<div class="center row">
+			<div class="col s12 m6 offset-m3 l4 offset-l4">
+				<audio id="myTune">
+				  <source src="{% static "welcome.mp3" %}">
+				  <source src="{% static "welcome.ogg" %}">
+				</audio>
+				<a onclick="document.getElementById('myTune').play()" class="waves-effect waves-light btn-large larger btn-color modal-trigger" href="#modal1">Unlock my Door!</a>
+				<!-- Modal Structure -->
+				<div id="modal1" class="modal bottom-sheet">
+					<div class="modal-content">
+						<span class="flow-text">Door Unlocked!</span>
+						<img class="img-size" src="{% static "unlock.png" %}">
+					</div>
+					<div class="modal-footer">
+						<a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="center row">
+			<div class="col s12 m6 offset-m3 l4 offset-l4">
+				<a class="waves-effect waves-light btn-large larger btn-color-2 modal-trigger" href="#modal1">SUDO Unlock my Door!</a>
+			</div>
+		</div>
+		<div class="center row">
+			<div class="col s12 m6 offset-m3 l4 offset-l4">
+				<a class="waves-effect waves-light btn-large larger btn-color">Unlock my Door!</a>
+			</div>
+		</div>
+		<br><br>
 	</div>
-	
+
 </div>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.modal').modal();
+	});
+	         
+</script>
 {% endblock content %}

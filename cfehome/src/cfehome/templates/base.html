@@ -50,6 +50,12 @@
 			position: relative;
 			top: 10px;
 		}
+		.top-logo{
+			height: 45%;
+			position: relative;
+			top: 5px;
+			left: 15px;
+		}
 	</style>
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.js"></script>
@@ -58,7 +64,7 @@
 	<nav class="white z-depth-2">
 		<div class="container nav-wrapper ">
 			{% block logolink %}
-			<a href="{% url "home" %}" class="flow-text black-text">F-Unlock</a>
+			<a href="{% url "home" %}" class="flow-text black-text"><img class="top-logo" src="{% static "top-logo.png" %}"></a>
 			{% endblock logolink %}
 			<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons black-text">menu</i></a>
 			<ul id="nav-mobile" class="right hide-on-med-and-down">
