@@ -2,63 +2,59 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="icon" sizes="192x192" href="{% static "ico2.png" %}">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
 	<title>{% block title %}F-Unlock{% endblock title %}</title>
 	<!-- Compiled and minified CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<style type="text/css">
-		.logo{
-			margin-top: 15%;
-			width: 50px;
-		}
-		.foot-color{
-			background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-		}
-		#arrow {
-			position: relative;
-			top: 0;
-			transition: top ease 0.2s;
-		}
-		#arrow:hover {
-			top: -15px;
-		}
-		.slewedBox {
-			position: absolute;	
-			background-image: linear-gradient(to bottom right, #0d0077, #ff3d3d);
-			width: 100%;
-			height: 90%;
-			padding: 200px 0;
-			transform: skew(0deg, -6deg) translateY(-190px);
-			z-index: -1;
-		}
-		.content-banner{
-			transform: skew(0deg, 6deg);
-		}
-		.rounder{
-			border-radius: 30px;
-			height: 260px;
-		}
-		.oval{
-			border-radius: 30px;
-		}
-		.call-action{
-			position: relative;
-		    top: 6px;
-			font-size: 200%;
-		}
-		.offset{
-			position: relative;
-			top: 10px;
-		}
-		.top-logo{
-			height: 45%;
-			position: relative;
-			top: 5px;
-			left: 15px;
-		}
-	</style>
+	.logo{
+		margin-top: 15%;
+		width: 50px;
+	}
+	.foot-color{
+		background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+	}
+	#arrow {
+		position: relative;
+		top: 0;
+		transition: top ease 0.2s;
+	}
+	#arrow:hover {
+		top: -15px;
+	}
 
+	.content-banner{
+		transform: skew(0deg, 6deg);
+	}
+	.rounder{
+		border-radius: 30px;
+		height: 260px;
+	}
+	.oval{
+		border-radius: 30px;
+	}
+	.call-action{
+		position: relative;
+		top: 6px;
+		font-size: 200%;
+	}
+	.offset{
+		position: relative;
+		top: 10px;
+	}
+	.top-logo{
+		height: 45%;
+		position: relative;
+		top: 5px;
+		left: 15px;
+	}
+	</style>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
 </head>
 <body class="blue-grey lighten-5">
 	<nav class="white z-depth-2">
@@ -69,50 +65,49 @@
 			<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons black-text">menu</i></a>
 			<ul id="nav-mobile" class="right hide-on-med-and-down">
 				{% if user.is_authenticated %}
-					{# <li><a href="{% url "create" %}" class="black-text"><i class="material-icons black-text">control_point</i></a></li> #}
-					<li><a href="javascript:{document.getElementById('logout').submit()}" class="black-text">Logout</a></li>
-					<form id="logout" method="POST" action="{% url "logout" %}">
-						{% csrf_token %}
-						<input type="hidden" />
-					</form>
+				<li><a href="javascript:{document.getElementById('logout').submit()}" class="black-text">Logout</a></li>
+				<form id="logout" method="POST" action="{% url "logout" %}">
+					{% csrf_token %}
+					<input type="hidden" />
+				</form>
 				{% else %}
-				    <li><a href="{% url "signup" %}" class="black-text">Sign Up</a></li>
-					<li><a href="{% url "login" %}" class="black-text">Login</a></li>
+				<li><a href="{% url "signup" %}" class="black-text">Sign Up</a></li>
+				<li><a href="{% url "login" %}" class="black-text">Login</a></li>
 				{% endif %}
 			</ul>
 		</div>
 	</nav>
 	<ul class="sidenav" id="mobile-demo">
 		{% if user.is_authenticated %}
-			<li><a href="javascript:{document.getElementById('logout').submit()}" class="black-text">Logout</a></li>
-			<form id="logout" method="POST" action="{% url "logout" %}">
-				{% csrf_token %}
-				<input type="hidden" />
-			</form>
+		<li><a href="javascript:{document.getElementById('logout').submit()}" class="black-text">Logout</a></li>
+		<form id="logout" method="POST" action="{% url "logout" %}">
+			{% csrf_token %}
+			<input type="hidden" />
+		</form>
 		{% else %}
-		    <li><a href="{% url "login" %}">Login</a></li>
-			<li><a href="{% url "signup" %}">Sign Up</a></li>
+		<li><a href="{% url "login" %}">Login</a></li>
+		<li><a href="{% url "signup" %}">Sign Up</a></li>
 		{% endif %}
 	</ul>
 	<br>
 
 	{% block content %}
-	    
+
 	{% endblock content %}
 
-	
+
 	<footer class="page-footer foot-color">
 		<div class="container">
 			<div class="row">
 				<div class="col l11 s12">
 					<h5 class="white-text">F-Unlock</h5>
-					<p class="grey-text text-lighten-4">The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.The quick brown fox jumps over the lazy dog.The quick brown fox jumps over the lazy dog.The quick brown fox jumps over the lazy dog.The quick brown fox jumps over the lazy dog.</p>
+					<p class="grey-text text-lighten-4">The project is about smart lock which can be unlocked using Face Recognition. The face is recognised using webcam in real time through Raspberry Pi. In case of successful authentication, the raspberry Pi commands the relay to unlock the lock & hence the door is opened.</p>
 				</div>
 				<div class="col l1 s12">
 					<h5 class="white-text">Links</h5>
 					<ul>
 						<li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-						<li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+						<li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
 					</ul>
 				</div>
 			</div>
@@ -125,21 +120,11 @@
 		</div>
 	</footer>
 
-
 	<script type="text/javascript">
-		$(document).ready(function(){
-		    $('.sidenav').sidenav();
-		});
-		$(document).ready(function(){
-		    $('.tooltipped').tooltip();
-		});
-		  document.addEventListener('DOMContentLoaded', function() {
-	    var elems = document.querySelectorAll('.tooltipped');
-	    var instances = M.Tooltip.init(elems, options);
-		  });
+	$(document).ready(function(){
+		$('.sidenav').sidenav();
+	});
 	</script>
-	<!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-	
+
 </body>
 </html>

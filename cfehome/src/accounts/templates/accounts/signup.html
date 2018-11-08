@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 
 {% block content %}
-<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
 
 <style type="text/css">
 	.slewedBox3{
@@ -16,7 +15,12 @@
 	}
 	.btn-color{
 		/*background-image: linear-gradient(to bottom right, #ff3232, #a01e1e);*/
-		background-image: linear-gradient(to bottom right, #f43b47 0%, #453a94 100%);
+background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+	}
+
+	.larger{
+		width: 100%;
+		border-radius: 100px;
 	}
 
 </style>
@@ -42,33 +46,38 @@
 					{% csrf_token %}
 					<div class="row">
 						<div class="input-field col s10 offset-s1">
-							<input id="username" type="text" class="validate" name="username">
+							<input id="username" type="text" class="validate" name="username" required="" aria-required="true">
 							<label for="username">Username</label>
 						</div>
 						<div class="input-field col s10 offset-s1">
-							<input id="firstname" type="text" class="validate" name="firstname">
+							<input id="firstname" type="text" class="validate" name="firstname" required="" aria-required="true">
 							<label for="firstname">First Name</label>
 						</div>
 						<div class="input-field col s10 offset-s1">
-							<input id="lastname" type="text" class="validate" name="lastname">
+							<input id="lastname" type="text" class="validate" name="lastname" required="" aria-required="true">
 							<label for="lastname">Last Name</label>
 						</div>
 						<div class="input-field col s10 offset-s1">
-							<input id="email" type="email" class="validate" name="email">
+							<input id="email" type="email" class="validate" name="email" required="" aria-required="true">
 							<label for="email">Email</label>
 							<span class="helper-text" data-error="ᕙ(⇀‸↼‶)ᕗ" data-success="♥‿♥">( ͡° ͜ʖ ͡°)</span>
 						</div>
 						<div class="input-field col s10 offset-s1">
-							<input id="password1" type="password" class="validate" name="pass1">
+							<input id="password1" type="password" class="validate" name="pass1" required="" aria-required="true">
 							<label for="password1">Password</label>
 						</div>
 						<div class="input-field col s10 offset-s1">
-							<input id="password2" type="password" class="validate" name="pass2">
+							<input id="password2" type="password" class="validate" name="pass2" required="" aria-required="true">
 							<label for="password2">Confirm Password</label>
 						</div>
 					</div>
 					<div class="card-action center">
 						<br>
+						<div class="row center">
+							<div class="col s12 m12 l8 offset-l2">
+							<a class="waves-effect waves-light btn-large larger btn-color z-depth-3">Request One Time Access</a>
+							</div>
+						</div>
 						<button class="btn-large waves-effect waves-light cyan darken-3 oval btn-color z-depth-3" type="submit" name="action">Sign Up!</button>
 					</div>
 				</form>

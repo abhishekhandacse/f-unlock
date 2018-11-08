@@ -14,9 +14,26 @@
 		position: relative;
 		top: 12px;
 	}
+	.larger{
+		width: 100%;
+		border-radius: 100px;
+	}
+	.btn-color{
+		background-image: linear-gradient(-225deg, #A445B2 0%, #D41872 52%, #FF0066 100%);
+	}
+	.slewedBox {
+		position: absolute;	
+		background-image: linear-gradient(to bottom right, #0d0077, #ff3d3d);
+		width: 100%;
+		height: 115%;
+		padding: 200px 0;
+		transform: skew(0deg, -6deg) translateY(-190px);
+		z-index: -1;
+	}
+
 </style>
 
-<div class="slewedBox">
+<div class="slewedBox ">
 </div>
 <br>
 <div class="container">
@@ -30,7 +47,7 @@
 				Theft prevention during unauthorized access.</blockquote>
 			</div>
 		</div>
-		<div class="col s12 m4">
+		<div class="col m4 hide-on-small-only">
 			<br>
 			<img class="responsive-img" src="{% static "logo2.png" %}">
 		</div>
@@ -74,6 +91,7 @@
 			<a href="{% url "login" %}" class="cyan accent-4 z-depth-3 waves-effect waves-light btn-large oval">Login!</a>
 			{% endif %}
 	</div>
+
 	<br><br><br>
 	<div class="row center">
 		<h2><i class="medium material-icons ico">group</i> &#8291;Team</h2>

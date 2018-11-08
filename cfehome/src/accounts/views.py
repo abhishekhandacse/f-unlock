@@ -5,23 +5,25 @@ from django.contrib import auth
 def signup(request):
 	if request.method=='POST':
 		if request.POST['pass1']==request.POST['pass2']:
-			try:
-				user = User.objects.get(username =request.POST['username'])
-				return render(request, 'accounts/signup.html',{'error':'Username already taken!'})
-			except User.DoesNotExist:
-				user = User.objects.create_user(
-					request.POST['username'],
-					first_name=request.POST['firstname'],
-					last_name=request.POST['lastname'],
-					email=request.POST['email'],
-					password=request.POST['pass1']
-					)
-				auth.login(request, user)
-				return redirect('home')
+			if request.POST['username'] and request.POST['firstname'] and request.POST['lastname'] and request.POST['email'] and request.POST['pass1']:
+				try:
+					user = User.objects.get(username =request.POST['username'])
+					return render(request, 'accounts/signup.html',{'error':'Username already taken!'})
+				except User.DoesNotExist:
+					user = User.objects.create_user(
+						request.POST['username'],
+						first_name=request.POST['firstname'],
+						last_name=request.POST['lastname'],
+						email=request.POST['email'],
+						password=request.POST['pass1']
+						)
+					auth.login(request, user)
+					return redirect('home')
+			else:
+				return render(request,'accounts/signup.html',{'error':'All fields are required!'})	
 		else:
 			return render(request, 'accounts/signup.html',{'error':'Passwords must match!'})
-	else:
-		return render(request, 'accounts/signup.html')
+	return render(request, 'accounts/signup.html')
 
 def login(request):
 	if request.method=='POST':
