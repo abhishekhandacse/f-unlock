@@ -51,6 +51,13 @@
 		top: 5px;
 		left: 15px;
 	}
+	.fab-ico{
+		height: 45%;
+	}
+	.fab-btn-fix{
+		position: relative; 
+		top:7px;
+	}
 	</style>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -64,8 +71,10 @@
 			{% endblock logolink %}
 			<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons black-text">menu</i></a>
 			<ul id="nav-mobile" class="right hide-on-med-and-down">
+				<li><a href="{% url "admin:index" %}" class="black-text">Admin</a></li>
 				{% if user.is_authenticated %}
 				<li><a href="javascript:{document.getElementById('logout').submit()}" class="black-text">Logout</a></li>
+
 				<form id="logout" method="POST" action="{% url "logout" %}">
 					{% csrf_token %}
 					<input type="hidden" />
@@ -78,6 +87,12 @@
 		</div>
 	</nav>
 	<ul class="sidenav" id="mobile-demo">
+		<br><br><br>
+		<li class="center">
+			<img style="height: 200px; top: 50px;" src="{% static "logo.png" %}">
+		</li>
+		<br>
+		<li><a href="{% url "admin:index" %}" class="black-text">Admin</a></li>
 		{% if user.is_authenticated %}
 		<li><a href="javascript:{document.getElementById('logout').submit()}" class="black-text">Logout</a></li>
 		<form id="logout" method="POST" action="{% url "logout" %}">
@@ -91,6 +106,29 @@
 	</ul>
 	<br>
 
+	<div class="fixed-action-btn toolbar">
+		<a class="btn-floating btn-large deep-purple darken-3">
+			<i class="large material-icons">menu</i>
+		</a>
+		<ul class="">
+			{% if user.is_authenticated %}
+			<li><a href="javascript:{document.getElementById('logout').submit()}" class="btn-floating fab-btn-fix">
+				<img src="{% static "logout.png" %}" class="fab-ico">
+			</a></li>
+			{% else %}
+			<li><a href="{% url "login" %}" class="btn-floating fab-btn-fix">
+				<img src="{% static "login.png" %}" class="fab-ico">
+			</a></li>
+			<li><a href="{% url "signup" %}" class="btn-floating fab-btn-fix">
+				<img src="{% static "register.png" %}" class="fab-ico">
+			</a></li>
+			{% endif %}
+			<li><a href="{% url "admin:index" %}" class="btn-floating fab-btn-fix">
+				<img src="{% static "admin.png" %}" class="fab-ico">
+			</a></li>
+
+		</ul>
+	</div>
 	{% block content %}
 
 	{% endblock content %}
@@ -99,31 +137,32 @@
 	<footer class="page-footer foot-color">
 		<div class="container">
 			<div class="row">
-				<div class="col l11 s12">
+				<div class="col l12 s12">
 					<h5 class="white-text">F-Unlock</h5>
 					<p class="grey-text text-lighten-4">The project is about smart lock which can be unlocked using Face Recognition. The face is recognised using webcam in real time through Raspberry Pi. In case of successful authentication, the raspberry Pi commands the relay to unlock the lock & hence the door is opened.</p>
-				</div>
-				<div class="col l1 s12">
-					<h5 class="white-text">Links</h5>
-					<ul>
-						<li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-						<li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-					</ul>
 				</div>
 			</div>
 		</div>
 		<div class="footer-copyright">
 			<div class="container">
 				© {% now "Y" %} Copyright by F-Unlock | <a class="yellow-text" href="http://www.thapar.edu/" target="_blank">Thapar Institute of Engineering & Technology</a>
-				<a class="grey-text text-lighten-4 right" href="{% url "home" %}">home</a>
+				<a class="grey-text text-lighten-4 right" href="{% url "home" %}">Home</a>
 			</div>
 		</div>
 	</footer>
+
+
 
 	<script type="text/javascript">
 	$(document).ready(function(){
 		$('.sidenav').sidenav();
 	});
+	$(document).ready(function(){
+		$('.fixed-action-btn').floatingActionButton({
+		    toolbarEnabled: true
+		});
+	});
+
 	</script>
 
 </body>

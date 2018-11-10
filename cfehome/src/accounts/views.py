@@ -26,6 +26,8 @@ def signup(request):
 	return render(request, 'accounts/signup.html')
 
 def login(request):
+	if request.user.is_authenticated:
+		return redirect('panel')
 	if request.method=='POST':
 		user = auth.authenticate(username=request.POST['username'],password=request.POST['pass'])
 		if user is not None:

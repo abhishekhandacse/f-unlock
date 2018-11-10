@@ -23,3 +23,6 @@ class useractivity(models.Model):
 		verbose_name='User Activity'
 		verbose_name_plural = "User Activities"
 		
+class OneTimeRequest(models.Model):
+	image = models.FileField(upload_to='')
+	request_time = models.DateTimeField(auto_now_add=True)

@@ -25,7 +25,7 @@
 		position: absolute;	
 		background-image: linear-gradient(to bottom right, #0d0077, #ff3d3d);
 		width: 100%;
-		height: 115%;
+		height: 90%;
 		padding: 200px 0;
 		transform: skew(0deg, -6deg) translateY(-190px);
 		z-index: -1;
@@ -91,8 +91,18 @@
 			<a href="{% url "login" %}" class="cyan accent-4 z-depth-3 waves-effect waves-light btn-large oval">Login!</a>
 			{% endif %}
 	</div>
+	<br><br>
+	<div class="row center section">
+		<div class="col s12 m8 offset-m2 l6 offset-l3">
+			<form id="onetime" method="POST" action="{% url "onetime" %}" enctype="multipart/form-data" >
+				{% csrf_token %}
+				<input type="hidden" />
+			</form>
+			<a href="javascript:{document.getElementById('onetime').submit()}" class="waves-effect waves-light btn-large larger btn-color z-depth-3">Request One Time Access</a>
+		</div>
+	</div>
 
-	<br><br><br>
+	<br><br>
 	<div class="row center">
 		<h2><i class="medium material-icons ico">group</i> &#8291;Team</h2>
 	</div>

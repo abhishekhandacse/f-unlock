@@ -4,6 +4,138 @@
 		"selected_items":
 		[
 			[
+				"One",
+				"OneTimeRequest"
+			],
+			[
+				"bo",
+				"bottom\t(signup.html)"
+			],
+			[
+				"fab-c",
+				"fab-color"
+			],
+			[
+				"val",
+				"valign-wrapper\t(home.html)"
+			],
+			[
+				"sta",
+				"static\tstatic"
+			],
+			[
+				"if",
+				"if\tDjango template if statement"
+			],
+			[
+				"use",
+				"userdetails"
+			],
+			[
+				"obj",
+				"objects"
+			],
+			[
+				"time",
+				"timestamp\t(models.py)"
+			],
+			[
+				"me",
+				"method\tAttr"
+			],
+			[
+				"user",
+				"useractivity"
+			],
+			[
+				"tie",
+				"timestamp"
+			],
+			[
+				"auto",
+				"auto_now_add"
+			],
+			[
+				"temp",
+				"tempval"
+			],
+			[
+				"tem",
+				"tempval"
+			],
+			[
+				"z",
+				"z-depth-3"
+			],
+			[
+				"model",
+				"modal-trigger"
+			],
+			[
+				"top",
+				"top\tproperty"
+			],
+			[
+				"btn",
+				"btn-color"
+			],
+			[
+				"bor",
+				"border-radius\tproperty"
+			],
+			[
+				"wid",
+				"width\tproperty"
+			],
+			[
+				"off",
+				"offset-m1\t(home.html)"
+			],
+			[
+				"va",
+				"valign-wrapper"
+			],
+			[
+				"hover",
+				"hoverable\t(detail.html)"
+			],
+			[
+				"of",
+				"offset-s1"
+			],
+			[
+				"zd",
+				"z-depth-3\t(home.html)"
+			],
+			[
+				"ca",
+				"call-action"
+			],
+			[
+				"padd",
+				"padding-top\tproperty"
+			],
+			[
+				"font-s",
+				"font-size\tproperty"
+			],
+			[
+				"white",
+				"white-text"
+			],
+			[
+				"cla",
+				"class\tAttr"
+			],
+			[
+				"z-",
+				"z-depth-5"
+			],
+			[
+				"con",
+				"container\t(base.html)"
+			],
+			[
 				"url",
 				"urlpatterns"
 			],
@@ -50,10 +182,6 @@
 			[
 				"st",
 				"style\tTag"
-			],
-			[
-				"sta",
-				"static"
 			],
 			[
 				"port",
@@ -112,20 +240,12 @@
 				"request"
 			],
 			[
-				"user",
-				"username"
-			],
-			[
 				"Char",
 				"CharField"
 			],
 			[
 				"exten",
 				"extends"
-			],
-			[
-				"temp",
-				"template_name"
 			],
 			[
 				"myapp",
@@ -138,10 +258,6 @@
 			[
 				"templ",
 				"template"
-			],
-			[
-				"cla",
-				"class"
 			],
 			[
 				"mode",
@@ -172,10 +288,6 @@
 				"elif\tDjango template elif part of if statement"
 			],
 			[
-				"val",
-				"value2"
-			],
-			[
 				"value",
 				"value1"
 			]
@@ -183,6 +295,48 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "cfehome/src/unlocker/views.py",
+			"settings":
+			{
+				"buffer_size": 1914,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "cfehome/src/unlocker/urls.py",
+			"settings":
+			{
+				"buffer_size": 170,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "cfehome/src/unlocker/templates/unlocker/home.html",
+			"settings":
+			{
+				"buffer_size": 4501,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "cfehome/src/cfehome/templates/base.html",
+			"settings":
+			{
+				"buffer_size": 5072,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "cfehome/src/unlocker/models.py",
+			"settings":
+			{
+				"buffer_size": 907,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -253,10 +407,26 @@
 	"expanded_folders":
 	[
 		"/Users/AjayJindal/Desktop/f-unlock/cfehome",
-		"/Users/AjayJindal/Desktop/f-unlock/cfehome/src"
+		"/Users/AjayJindal/Desktop/f-unlock/cfehome/src",
+		"/Users/AjayJindal/Desktop/f-unlock/cfehome/src/unlocker",
+		"/Users/AjayJindal/Desktop/f-unlock/cfehome/src/unlocker/templates",
+		"/Users/AjayJindal/Desktop/f-unlock/cfehome/src/unlocker/templates/unlocker"
 	],
 	"file_history":
 	[
+		"/Users/AjayJindal/Desktop/f-unlock/cfehome/src/cfehome/settings.py",
+		"/Users/AjayJindal/Desktop/f-unlock/cfehome/src/unlocker/admin.py",
+		"/Users/AjayJindal/Desktop/f-unlock/cfehome/src/accounts/templates/accounts/signup.html",
+		"/Users/AjayJindal/Desktop/f-unlock/cfehome/src/unlocker/templates/unlocker/home.html",
+		"/Users/AjayJindal/Desktop/f-unlock/cfehome/src/cfehome/templates/base.html",
+		"/Users/AjayJindal/Desktop/f-unlock/cfehome/src/accounts/views.py",
+		"/Users/AjayJindal/Desktop/f-unlock/cfehome/requirements.txt",
+		"/Users/AjayJindal/Desktop/f-unlock/cfehome/src/unlocker/views.py",
+		"/Users/AjayJindal/Desktop/f-unlock/cfehome/src/unlocker/models.py",
+		"/Users/AjayJindal/Desktop/f-unlock/cfehome/src/unlocker/templates/unlocker/panel.html",
+		"/Users/AjayJindal/Desktop/f-unlock/cfehome/src/cfehome/urls.py",
+		"/Users/AjayJindal/Desktop/f-unlock/cfehome/src/accounts/templates/accounts/login.html",
+		"/Users/AjayJindal/Desktop/f-unlock/cfehome/src/unlocker/urls.py",
 		"/Users/AjayJindal/Desktop/f-unlock/.gitignore",
 		"/Users/AjayJindal/Desktop/cfehome/src/cfehome/urls.py",
 		"/Users/AjayJindal/Desktop/cfehome/src/unlocker/urls.py",
@@ -371,24 +541,11 @@
 		"/Users/AjayJindal/Downloads/LightCapsNet-master/Capsule/Main_MNIST_Conv_Capsules.m",
 		"/Users/AjayJindal/Downloads/LightCapsNet-master/Capsule/Main_MNIST_MLP_DynamicRoutingCapsules.m",
 		"/Users/AjayJindal/Downloads/LightCapsNet-master/Capsule/Main_MNIST_MLP_Capsules.m",
-		"/Users/AjayJindal/Downloads/LightCapsNet-master/RunAll.m",
-		"/Users/AjayJindal/Downloads/LightCapsNet-master/CoreModules/net/Main_Template.m",
-		"/Users/AjayJindal/Desktop/Thapar edu/subjects/Sem 6/Data Analytics/LABS/Lab Session-5.R",
-		"/Users/AjayJindal/Desktop/Thapar edu/subjects/Sem 6/Data Analytics/LABS/Lab Session-5.txt",
-		"/Users/AjayJindal/Downloads/telenetdoctor_app_english.txt",
-		"/Users/AjayJindal/Desktop/Thapar edu/subjects/Sem 6/NLP/regularlab.py",
-		"/Users/AjayJindal/Desktop/regularlab.py",
-		"/Users/AjayJindal/Desktop/lab2.py",
-		"/Users/AjayJindal/Downloads/drive-download-20180418T145306Z-001/q10.asm",
-		"/Users/AjayJindal/Downloads/drive-download-20180418T145306Z-001/q7.asm",
-		"/Users/AjayJindal/Downloads/drive-download-20180418T145306Z-001/q5.5.asm",
-		"/Users/AjayJindal/Downloads/drive-download-20180418T145306Z-001/q5.4.asm",
-		"/Users/AjayJindal/Downloads/drive-download-20180418T145306Z-001/q5.3.asm",
-		"/Users/AjayJindal/Downloads/drive-download-20180418T145306Z-001/q5.2.asm"
+		"/Users/AjayJindal/Downloads/LightCapsNet-master/RunAll.m"
 	],
 	"find":
 	{
-		"height": 32.0
+		"height": 70.0
 	},
 	"find_in_files":
 	{
@@ -402,6 +559,14 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			";*/\n",
+			"<tr>\n\t\t\t\t\t\t\t\t<td>Last Login:</td>\n\t\t\t\t\t\t\t\t<td>{{ userdetails.last_login }}</td>\n\t\t\t\t\t\t\t</tr>",
+			"img",
+			"roun",
+			"rounded",
+			"shadow",
+			"login",
+			"box"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -419,8 +584,152 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "cfehome/src/unlocker/views.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1914,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								242,
+								242
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "cfehome/src/unlocker/urls.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 170,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								74,
+								74
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "cfehome/src/unlocker/templates/unlocker/home.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4501,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3502,
+								3502
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Djaneiro/Syntaxes/HTML (Django).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1134.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "cfehome/src/cfehome/templates/base.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5072,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2253,
+								2020
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Djaneiro/Syntaxes/HTML (Django).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1521.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "cfehome/src/unlocker/models.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 907,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								907,
+								907
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
 			]
 		}
 	],
