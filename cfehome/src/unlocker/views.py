@@ -22,7 +22,7 @@ def onetime(request):
 		# cmd = "raspistill -o /home/pi/Dev/cfehome/media-root/cam.jpg"
 		# subprocess.call(cmd, shell=True)
 		# subprocess.Popen(["python","/home/pi/Dev/cfehome/media-root/cam.py"], close_fds=True)
-		subprocess.call("raspistill --nopreview -t 5000 -o /home/pi/Dev/cfehome/media-root/cam.jpg", shell=True)
+		subprocess.call("raspistill --nopreview -t 4000 -o /home/pi/Dev/cfehome/media-root/cam.jpg -q 60", shell=True)
 		time.sleep(5)
 		reopen = open('/home/pi/Dev/cfehome/media-root/cam.jpg', "r+b")
 		django_file = File(reopen)
