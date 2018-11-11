@@ -11,7 +11,7 @@ class UserActivityAdmin(admin.ModelAdmin):
 		model=useractivity
 
 class RequestAdmin(admin.ModelAdmin):
-	list_display = ['request_time']
+	list_display = ['id','thumbnail','image','request_time']
 	list_filter = ['request_time']
 	class Meta:
 		model=OneTimeRequest

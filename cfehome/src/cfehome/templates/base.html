@@ -36,15 +36,7 @@
 	.oval{
 		border-radius: 30px;
 	}
-	.call-action{
-		position: relative;
-		top: 6px;
-		font-size: 200%;
-	}
-	.offset{
-		position: relative;
-		top: 10px;
-	}
+
 	.top-logo{
 		height: 45%;
 		position: relative;
@@ -73,8 +65,8 @@
 			<ul id="nav-mobile" class="right hide-on-med-and-down">
 				<li><a href="{% url "admin:index" %}" class="black-text">Admin</a></li>
 				{% if user.is_authenticated %}
+				<li><a href="{% url "panel" %}" class="black-text">Panel</a></li>
 				<li><a href="javascript:{document.getElementById('logout').submit()}" class="black-text">Logout</a></li>
-
 				<form id="logout" method="POST" action="{% url "logout" %}">
 					{% csrf_token %}
 					<input type="hidden" />
@@ -94,6 +86,7 @@
 		<br>
 		<li><a href="{% url "admin:index" %}" class="black-text">Admin</a></li>
 		{% if user.is_authenticated %}
+		<li><a href="{% url "panel" %}" class="black-text">Panel</a></li>
 		<li><a href="javascript:{document.getElementById('logout').submit()}" class="black-text">Logout</a></li>
 		<form id="logout" method="POST" action="{% url "logout" %}">
 			{% csrf_token %}
@@ -139,13 +132,13 @@
 			<div class="row">
 				<div class="col l12 s12">
 					<h5 class="white-text">F-Unlock</h5>
-					<p class="grey-text text-lighten-4">The project is about smart lock which can be unlocked using Face Recognition. The face is recognised using webcam in real time through Raspberry Pi. In case of successful authentication, the raspberry Pi commands the relay to unlock the lock & hence the door is opened.</p>
+					<p class="grey-text text-lighten-4">The project is about smart lock which can be unlocked using Face Recognition. The face is recognised using PiCamera in real time through Raspberry Pi. In case of successful authentication, the Raspberry Pi commands the relay to unlock the lock & hence the door is opened.</p>
 				</div>
 			</div>
 		</div>
 		<div class="footer-copyright">
 			<div class="container">
-				© {% now "Y" %} Copyright by F-Unlock | <a class="yellow-text" href="http://www.thapar.edu/" target="_blank">Thapar Institute of Engineering & Technology</a>
+				© {% now "jS F, Y" %} | Copyright by F-Unlock | <a class="yellow-text" href="http://www.thapar.edu/" target="_blank">Thapar Institute of Engineering & Technology</a>
 				<a class="grey-text text-lighten-4 right" href="{% url "home" %}">Home</a>
 			</div>
 		</div>

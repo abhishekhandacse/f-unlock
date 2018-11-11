@@ -32,17 +32,17 @@
 	border-radius: 100px;
 }
 .btn-color{
-background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+	background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 .btn-color-2{
-background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+	background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
 }
 .btn-color-3{
-background-image: linear-gradient(to top, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+	background-image: linear-gradient(to top, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
 }
 .myname{
 	text-transform: uppercase;
-background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+	background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	font-size: 200%;
@@ -55,11 +55,30 @@ background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
 	top: 30px;
 	left: 30px;
 }
+.one-time-img{
+	width: 50px;
+	height: 50px;
+}
+.collection-item{
+	padding: 0px;
+	margin: 0px;
+}
+.material-icons.green500 { color: #4db6ac; }
+.material-icons.red500 { color: #e53935; }
 </style>
 <div class="slewedBox1">
 </div>
-<br><br><br><br><br>
+<br><br>
+{% if msg %}
+	<div class="row">
+		<div class="s10 offset-s1 center">
+		    <h4 class="white-text">{{msg}}</h4>
+		</div>
+	</div>
+{% endif %}
+<br><br><br>
 <div class="container">
+	
 	<div class="card z-depth-2">
 		<div class="row center">
 			<div class="col s12 m10 offset-m1">
@@ -73,16 +92,14 @@ background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
 		</div>
 		<div class="center row">
 			<div class="col s12 m6 offset-m3 l4 offset-l4">
-				<audio id="myTune">
-				  <source src="{{ userdata.audio.url }}">
-				  <source src="{% static "welcome.ogg" %}">
-				</audio>
 				<form id="check" method="POST" action="">
 					{% csrf_token %}
 					<input type="hidden">
 				</form>
-				<a onclick="" class="waves-effect waves-light btn-large larger btn-color modal-trigger" href="javascript:{document.getElementById('check').submit()}">Unlock my Door!</a>
-				<!-- Modal Structure -->
+				<audio id="myTune">
+					<source src="{{ userdata.audio.url }}">
+					<source src="{% static "welcome.ogg" %}">
+				</audio>
 				<div id="modal1" class="modal bottom-sheet">
 					<div class="modal-content">
 						<span class="flow-text">Door Unlocked!</span>
@@ -92,11 +109,8 @@ background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
 						<a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
 					</div>
 				</div>
-			</div>
-		</div>
-		<div class="center row">
-			<div class="col s12 m6 offset-m3 l4 offset-l4">
-				<a onclick="document.getElementById('myTune').play()" class="waves-effect waves-light btn-large larger btn-color modal-trigger" href="#modal1">SUDO Unlock my Door!</a>
+				{# onclick="document.getElementById('myTune').play()" #}
+				<a class="waves-effect waves-light btn-large larger btn-color modal-trigger" href="javascript:{document.getElementById('check').submit()}" href="#modal1">SUDO Unlock my Door!</a>
 			</div>
 		</div>
 		<div class="row">
@@ -125,43 +139,90 @@ background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
 				<div class="row modal-content center">
 					<h5>My Details!</h5>
 					<div class="col s12 m10 offset-m1 l8 offset-l2">
-					<table class="centered striped">
-						<tbody class="center">
-							<tr>
-								<td>First Name:</td>
-								<td>{{ userdetails.first_name }}</td>
-							</tr>
-							<tr>
-								<td>Last Name:</td>
-								<td>{{ userdetails.last_name }}</td>
-							</tr>
-							<tr>
-								<td>Username:</td>
-								<td>{{ userdetails.username }}</td>
-							</tr>
-							<tr>
-								<td>Email:</td>
-								<td>{{ userdetails.email }}</td>
-							</tr>
-							<tr>
-								<td>Last Login:</td>
-								<td>{{ userdetails.last_login }}</td>
-							</tr>
-							<tr>
-								<td>Date Doined:</td>
-								<td>{{ userdetails.date_joined }}</td>
-							</tr>
-							<tr>
-								<td>Super User?</td>
-								{% if userdetails.is_superuser %}
-								    <td>Yes</td>
-								{% else %}
-								    <td>No</td>
-								{% endif %}
-							</tr>
-						</tbody>
-					</table>  
+						<table class="centered striped">
+							<tbody class="center">
+								<tr>
+									<td>First Name:</td>
+									<td>{{ userdetails.first_name }}</td>
+								</tr>
+								<tr>
+									<td>Last Name:</td>
+									<td>{{ userdetails.last_name }}</td>
+								</tr>
+								<tr>
+									<td>Username:</td>
+									<td>{{ userdetails.username }}</td>
+								</tr>
+								<tr>
+									<td>Email:</td>
+									<td>{{ userdetails.email }}</td>
+								</tr>
+								<tr>
+									<td>Last Login:</td>
+									<td>{{ userdetails.last_login }}</td>
+								</tr>
+								<tr>
+									<td>Date Doined:</td>
+									<td>{{ userdetails.date_joined }}</td>
+								</tr>
+								<tr>
+									<td>Super User?</td>
+									{% if userdetails.is_superuser %}
+									<td>Yes</td>
+									{% else %}
+									<td>No</td>
+									{% endif %}
+								</tr>
+							</tbody>
+						</table>  
 					</div>
+				</div>
+				<div class="modal-footer">
+					<a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s12 m6 offset-m3 l4 offset-l4 center">
+				<a class="waves-effect waves-light btn-large larger btn-color modal-trigger" href="#modal4">View One Time Requests</a>
+			</div>
+			<div id="modal4" class="modal">
+				<div class="modal-content center">
+					<h5>One Time Requests!</h5>
+					<br>
+					<ul class="collection">
+						{% for var in onetimerequests %}
+						<li class="collection-item">
+							<div class="valign-wrapper">
+								<div class="col s1">
+									<img src="{{ var.thumbnail.url }}" class="circle one-time-img">
+								</div>
+								<div class="col s3">
+									<a href="{{var.image.url}}" target="_blank" class="waves-effect waves-teal btn-flat">View Image</a>
+								</div>
+								<div class="col s3">
+									<span class="">Time: {{var.request_time}} </span>
+								</div>
+								<div class="col s3">
+									<a href="javascript:{document.getElementById('grant{{var.id}}').submit()}" class="waves-effect waves-teal btn-flat">Grant Access</a>
+								</div>
+
+								<form id="grant{{var.id}}" method="POST" action="{% url "grant" var.id %}">
+									{% csrf_token %}
+									<input type="hidden">
+								</form>
+								<div class="col s2">
+									{% if var.access %}
+									<i class="material-icons green500">verified_user</i>
+									{% else %}
+									<i class="material-icons red500">block</i>
+									{% endif %}
+								</div>
+							</div>
+						</li>
+						{% endfor %}
+					</ul>
+
 				</div>
 				<div class="modal-footer">
 					<a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
@@ -174,8 +235,8 @@ background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
 </div>
 <br><br><br><br><br>
 <script type="text/javascript">
-	$(document).ready(function(){
-		$('.modal').modal();
-	});
+$(document).ready(function(){
+	$('.modal').modal();
+});
 </script>
 {% endblock content %}

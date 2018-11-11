@@ -32,6 +32,7 @@ class OneTimeRequest(models.Model):
 	image = models.ImageField(upload_to='')
 	request_time = models.DateTimeField(auto_now_add=True)
 	thumbnail = models.ImageField(upload_to='thumbs/',editable=False, blank=True)
+	access = models.BooleanField(default=False)
 	def save(self, *args, **kwargs):
 		if not self.make_thumbnail():
 			raise Exception("Could not create thumbnail! Check the file type")

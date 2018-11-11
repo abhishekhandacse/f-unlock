@@ -21,6 +21,9 @@
 	.btn-color{
 		background-image: linear-gradient(-225deg, #A445B2 0%, #D41872 52%, #FF0066 100%);
 	}
+	.btn-color-1{
+		background-image: linear-gradient(to bottom right, #6a11cb 0%, #2575fc 100%);
+	}
 	.slewedBox {
 		position: absolute;	
 		background-image: linear-gradient(to bottom right, #0d0077, #ff3d3d);
@@ -30,7 +33,36 @@
 		transform: skew(0deg, -6deg) translateY(-190px);
 		z-index: -1;
 	}
+	.result-color-success{
+		background-image: linear-gradient(to top, #5f72bd 0%, #9b23ea 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+	.result-color-fail{
+background-image: linear-gradient(-225deg, #A445B2 0%, #D41872 52%, #FF0066 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+	.offset{
+		position: relative;
+		top: 10px;
+	}
 
+	@media screen and (min-width: 801px) {
+		.call-action{
+			position: relative;
+			bottom: 4px;
+			font-size: 40px;
+		}
+	}
+
+	@media screen and (max-width: 800px) {
+		.call-action{
+			position: relative;
+
+			font-size: 20px;
+		}
+	}
 </style>
 
 <div class="slewedBox ">
@@ -80,29 +112,144 @@
 			</div>
 		</div>
 	</div>
-	<br><br><br><br><br>
+	<br><br><br>
+	<div class="divider"></div><br>
+	
 	<div class="row center">
-			<i class="small material-icons offset">pets</i>
-			{% if user.is_authenticated %}
-			<span class="call-action"> &#8291; Take me to my panel! &#8291; &#8291; &#8291;</span>
-			<a href="{% url "panel" %}" class="red accent-4 z-depth-3 waves-effect waves-light btn-large oval">Let's Go!</a>
-			{% else %}
-			<span class="call-action"> &#8291; Login to your panel! &#8291; &#8291; &#8291;</span>
-			<a href="{% url "login" %}" class="cyan accent-4 z-depth-3 waves-effect waves-light btn-large oval">Login!</a>
-			{% endif %}
+		<div class="col s10 offset-s1 m6 offset-m3 l8 offset-l2">
+		{% if user.is_authenticated %}
+			<a href="{% url "panel" %}" class="red accent-4 larger z-depth-3 waves-effect waves-light btn-large">
+				<i class="material-icons right">pets</i>Take me to my panel!
+			</a>
+		{% else %}
+			<a href="{% url "login" %}" class="cyan accent-4 larger z-depth-3 waves-effect waves-light btn-large">
+			Login to your panel!<i class="material-icons right">fingerprint</i>
+			</a>
+		{% endif %}
+		</div>
 	</div>
-	<br><br>
-	<div class="row center section">
+	<div class="row center">
 		<div class="col s12 m8 offset-m2 l6 offset-l3">
 			<form id="onetime" method="POST" action="{% url "onetime" %}" enctype="multipart/form-data" >
 				{% csrf_token %}
 				<input type="hidden" />
 			</form>
-			<a href="javascript:{document.getElementById('onetime').submit()}" class="waves-effect waves-light btn-large larger btn-color z-depth-3">Request One Time Access</a>
+			<a id="progress-trigger-1" href="javascript:{document.getElementById('onetime').submit()}" class="waves-effect waves-light btn-large larger btn-color z-depth-3">Request One Time Access<i class="material-icons right">home</i></a>
 		</div>
 	</div>
-
-	<br><br>
+	<div class="row center" id="progress-funlock-1" style="display: none">
+		<div class="preloader-wrapper big active">
+			<div class="spinner-layer spinner-blue">
+				<div class="circle-clipper left">
+					<div class="circle"></div>
+				</div><div class="gap-patch">
+					<div class="circle"></div>
+				</div><div class="circle-clipper right">
+					<div class="circle"></div>
+				</div>
+			</div>
+			<div class="spinner-layer spinner-red">
+				<div class="circle-clipper left">
+					<div class="circle"></div>
+				</div><div class="gap-patch">
+					<div class="circle"></div>
+				</div><div class="circle-clipper right">
+					<div class="circle"></div>
+				</div>
+			</div>
+			<div class="spinner-layer spinner-yellow">
+				<div class="circle-clipper left">
+					<div class="circle"></div>
+				</div><div class="gap-patch">
+					<div class="circle"></div>
+				</div><div class="circle-clipper right">
+					<div class="circle"></div>
+				</div>
+			</div>
+			<div class="spinner-layer spinner-green">
+				<div class="circle-clipper left">
+					<div class="circle"></div>
+				</div><div class="gap-patch">
+					<div class="circle"></div>
+				</div><div class="circle-clipper right">
+					<div class="circle"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row center">
+		<div class="col s10 offset-s1 m6 offset-m3 l4 offset-l4">
+			<form id="funlock" method="POST" action="{% url "funlock" %}" enctype="multipart/form-data" >
+				{% csrf_token %}
+				<input type="hidden" />
+			</form>
+			<a id="progress-trigger-2" href="javascript:{document.getElementById('funlock').submit()}" class="waves-effect waves-light btn-large larger btn-color-1 z-depth-3">Unlock my door!<i class="material-icons right">center_focus_strong</i></a>
+		</div>
+	</div>
+	<div class="row center" id="progress-funlock-2" style="display: none">
+		<div class="preloader-wrapper big active">
+			<div class="spinner-layer spinner-blue">
+				<div class="circle-clipper left">
+					<div class="circle"></div>
+				</div><div class="gap-patch">
+					<div class="circle"></div>
+				</div><div class="circle-clipper right">
+					<div class="circle"></div>
+				</div>
+			</div>
+			<div class="spinner-layer spinner-red">
+				<div class="circle-clipper left">
+					<div class="circle"></div>
+				</div><div class="gap-patch">
+					<div class="circle"></div>
+				</div><div class="circle-clipper right">
+					<div class="circle"></div>
+				</div>
+			</div>
+			<div class="spinner-layer spinner-yellow">
+				<div class="circle-clipper left">
+					<div class="circle"></div>
+				</div><div class="gap-patch">
+					<div class="circle"></div>
+				</div><div class="circle-clipper right">
+					<div class="circle"></div>
+				</div>
+			</div>
+			<div class="spinner-layer spinner-green">
+				<div class="circle-clipper left">
+					<div class="circle"></div>
+				</div><div class="gap-patch">
+					<div class="circle"></div>
+				</div><div class="circle-clipper right">
+					<div class="circle"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function () {
+		    $("#progress-trigger-1").click(function () {
+		        $("#progress-funlock-1").toggle();
+		    });
+		});
+		$(document).ready(function () {
+		    $("#progress-trigger-2").click(function () {
+		        $("#progress-funlock-2").toggle();
+		    });
+		});
+	</script>
+	{% if msg %}
+		<div class="row">
+			<div class="s10 offset-s1 center">
+				{% if msg == "No" %}
+				    <h4 class="result-color-fail">Access Denied! Problem in recognizing your face</h4>
+			    {% else %}    
+					<h4 class="result-color-success">{{msg}}</h4>
+				{% endif %}
+			</div>
+		</div>
+	{% endif %}
+	<div class="divider"></div>
 	<div class="row center">
 		<h2><i class="medium material-icons ico">group</i> &#8291;Team</h2>
 	</div>
@@ -126,5 +273,5 @@
 		</div>
 	</div>
 </div>
-<br><br><br><br>
+<br><br><br>
 {% endblock content %}
