@@ -60,10 +60,9 @@ def face_comp():
 def funlock(request):
 	msg = ""
 	if request.method == 'POST':
-		# subprocess.call("raspistill --nopreview -t 2000 -o /home/pi/Dev/cfehome/media-root/target.jpg -q 80", shell=True)
+		subprocess.call("raspistill --nopreview -t 2000 -o /home/pi/Dev/cfehome/media-root/target.jpg -q 80", shell=True)
 		time.sleep(3)
-		# result = face_comp()
-		result = "Denied"
+		result = face_comp()
 		if result == "Denied":
 			msg = "No"
 			return render(request,'unlocker/home.html',{'msg':msg})
