@@ -110,7 +110,10 @@
 					</div>
 				</div>
 				{# onclick="document.getElementById('myTune').play()" #}
-				<a class="waves-effect waves-light btn-large larger btn-color modal-trigger" href="javascript:{document.getElementById('check').submit()}" href="#modal1">SUDO Unlock my Door!</a>
+				{% if userdetails.is_superuser %}
+					<a class="waves-effect waves-light btn-large larger btn-color modal-trigger" href="javascript:{document.getElementById('check').submit()}" href="#modal1">SUDO Unlock my Door!</a>    
+				{% endif %}
+				
 			</div>
 		</div>
 		<div class="row">
@@ -183,9 +186,11 @@
 			</div>
 		</div>
 		<div class="row">
+			{% if userdetails.is_superuser %}
 			<div class="col s12 m6 offset-m3 l4 offset-l4 center">
 				<a class="waves-effect waves-light btn-large larger btn-color modal-trigger" href="#modal4">View One Time Requests</a>
 			</div>
+			{%endif%}
 			<div id="modal4" class="modal">
 				<div class="modal-content center">
 					<h5>One Time Requests!</h5>

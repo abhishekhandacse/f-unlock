@@ -34,12 +34,12 @@
 		z-index: -1;
 	}
 	.result-color-success{
-		background-image: linear-gradient(to top, #5f72bd 0%, #9b23ea 100%);
+		background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 	}
 	.result-color-fail{
-background-image: linear-gradient(-225deg, #A445B2 0%, #D41872 52%, #FF0066 100%);
+		background-image: linear-gradient(225deg, #A445B2 0%, #D41872 52%, #FF0066 100%);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 	}
@@ -67,7 +67,27 @@ background-image: linear-gradient(-225deg, #A445B2 0%, #D41872 52%, #FF0066 100%
 
 <div class="slewedBox ">
 </div>
+
+{% if msg %}
+	<div class="container">
+	<div class="row center">
+		<div class="col s12 m8 offset-m2">
+			<div class="card grey lighten-5 oval hoverable z-depth-5">
+				<div class="card-content">
+				{% if msg == "No" %}
+				    <span class="result-color-fail flow-text">Access <b>Denied!</b> You are an unapproved individual</h4>
+			    {% else %}    
+					<span class="result-color-success flow-text">{{msg}}.</span>
+				{% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+{% else %}
 <br>
+{% endif %}
+
 <div class="container">
 	<div class="row">
 		<div class="col s12 m8 ">
@@ -238,17 +258,7 @@ background-image: linear-gradient(-225deg, #A445B2 0%, #D41872 52%, #FF0066 100%
 		    });
 		});
 	</script>
-	{% if msg %}
-		<div class="row">
-			<div class="s10 offset-s1 center">
-				{% if msg == "No" %}
-				    <h4 class="result-color-fail">Access Denied! Problem in recognizing your face</h4>
-			    {% else %}    
-					<h4 class="result-color-success">{{msg}}</h4>
-				{% endif %}
-			</div>
-		</div>
-	{% endif %}
+	
 	<div class="divider"></div>
 	<div class="row center">
 		<h2><i class="medium material-icons ico">group</i> &#8291;Team</h2>
